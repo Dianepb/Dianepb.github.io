@@ -1,0 +1,122 @@
+@media (min-width:450px) and (max-width:800px){
+
+h1, 
+h2, 
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Sofia' ;
+}
+
+
+h1{
+    color: orange;
+    font-size: 2em
+}
+
+h2{
+    color:cadetblue;
+    font-size: 1.5em
+}    
+
+p,
+ul, 
+li,
+dt, 
+dd{
+    color: rgb(54, 52, 52);
+    font-family:'Poiret One' ;
+    font-weight: 750;
+    font-size: 12px;
+
+}
+
+body{
+    font-size:20px;
+    font-weight: 750;
+    line-height:22px;
+    padding-top:15px;
+    padding-bottom:15px;
+}
+
+
+
+.container{
+    /* Step 1: Set display to grid */
+      display:grid;
+      width:90%;
+      height:90%;
+      margin:auto;
+      justify-self: center;
+   /* Step 2: setup rows amd columns */
+      grid-template-columns: repeat(4,1fr);
+      grid-template-rows: 0.5fr 4fr 0.5fr;
+      grid-gap: 5px;
+      grid-template-areas: 
+      "hd hd hd sd"
+      "main main main main"
+      "ft ft ft ft ";
+    /* Step 3 : decoration */  
+      border: 2px solid blue;
+  }
+
+#nestedGrid{
+  width:95%; /*Super important to specify it*/
+  display: grid;
+  grid-template-columns:repeat(2,1fr);
+  grid-auto-rows:200px;
+  grid-gap:10px;
+  border:9px solid black;
+}
+
+/*#one{
+  grid-column: 1/span 1;
+  grid-row: 1/span 1;
+} 
+
+#two{
+  grid-column: 2/span 1;
+  grid-row: 1/span 1;
+}
+
+#three{
+  grid-column: 3/span 1;
+  grid-row: 1/span 1;
+} */
+
+
+.blogPage{ 
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  color: #fff;
+  padding: 10px;
+  border-radius: 25% 10%; /* https://developer.mozilla.org/fr/docs/Web/CSS/border-radius*/ 
+  place-self: center;
+}
+
+
+
+  .box{
+    border: 1px solid red;
+    }
+  .header{
+    grid-area:hd;
+  }
+  .footer{
+    grid-area:ft;
+  }
+  .sidebar{
+    grid-area:sd;
+  }
+  .content{
+    grid-area:main;
+    display: grid;
+    justify-items: center;
+  }
+
+}
